@@ -11,7 +11,6 @@ import Paper from "@material-ui/core/Paper";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 import { Grid } from "@material-ui/core";
-
 const rows = [
   {
     question: "What do i have to do in the study?",
@@ -40,7 +39,7 @@ function Row(props) {
   const [open, setOpen] = React.useState(false);
 
   return (
-    <React.Fragment>
+    <>
       <TableRow>
         <TableCell>
           <h5>{row.question}</h5>
@@ -63,7 +62,7 @@ function Row(props) {
           </Collapse>
         </TableCell>
       </TableRow>
-    </React.Fragment>
+    </>
   );
 }
 

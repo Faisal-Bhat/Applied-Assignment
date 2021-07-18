@@ -10,6 +10,9 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
   },
+  stepIcon: {
+    fontSize: 32,
+  },
 }));
 
 function getSteps() {
@@ -59,7 +62,15 @@ export default function Journey() {
           <Stepper orientation="vertical">
             {steps.map((label, index) => (
               <Step key={index} active={true}>
-                <StepLabel>{label}</StepLabel>
+                <StepLabel
+                  StepIconProps={{
+                    classes: {
+                      root: classes.stepIcon,
+                    },
+                  }}
+                >
+                  <h5 className="font-medium">{label}</h5>
+                </StepLabel>
                 <StepContent>
                   <Typography>{getStepContent(index)}</Typography>
                 </StepContent>

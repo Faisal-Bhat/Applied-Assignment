@@ -1,61 +1,53 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
-import { Paper, Grid, Card } from "@material-ui/core";
+import { Grid, Card } from "@material-ui/core";
+import { Parallax } from "react-parallax";
 
 function About() {
   return (
     <>
-      <Paper
-        id="about"
-        style={{
-          backgroundAttachment: "fixed",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "100% 80%",
-          backgroundImage: `url("/assets/bg-2.jpg")`,
-          paddingTop: "5em",
-          paddingBottom: "1em",
-          boxShadow: "none",
-        }}
-      >
-        <h3 className="text-white text-center">About The Study</h3>
-        <p className="text-white text-center">
-          Here are some Highlights of our study
-        </p>
-        <Grid container spacing={2}>
-          <Grid item md={2}></Grid>
-          <Grid item md={4}>
-            <Card className="p-5 my-4 bg-light-gray">
-              <h4>Eligibilty</h4>
-              <p>
-                18 years or older participants with symptoms of MDS or anemia.
-              </p>
-            </Card>
-            <Card className="p-5 my-4 bg-light-gray">
-              <h4>Treatment Period</h4>
-              <p>
-                The total treatment period of this study is about 20-24 weeks.
-              </p>
-            </Card>
+      <Parallax bgImage="/assets/bg-2.jpg" strength={500}>
+        <div style={{ height: 500 }} id="about">
+          <h3 className="text-white text-center mt-20">About The Study</h3>
+          <p className="text-white text-center">
+            Here are some Highlights of our study
+          </p>
+          <Grid container spacing={2}>
+            <Grid item md={2}></Grid>
+            <Grid item md={4}>
+              <Card className="p-5 my-4 bg-light-gray">
+                <h4>Eligibilty</h4>
+                <p>
+                  18 years or older participants with symptoms of MDS or anemia.
+                </p>
+              </Card>
+              <Card className="p-5 my-4 bg-light-gray">
+                <h4>Treatment Period</h4>
+                <p>
+                  The total treatment period of this study is about 20-24 weeks.
+                </p>
+              </Card>
+            </Grid>
+            <Grid item md={4}>
+              <Card className="p-5 my-4 bg-light-gray">
+                <h4>Monthly Check-ups</h4>
+                <p>
+                  A check-up of every third weekend of a month to keep track of
+                  patient's health and recovery.
+                </p>
+              </Card>
+              <Card className="p-5 my-4 bg-light-gray">
+                <h4>Compensation</h4>
+                <p>
+                  Participants might recieve upto $30 for taking part in the
+                  study.
+                </p>
+              </Card>
+            </Grid>
+            <Grid item md={2}></Grid>
           </Grid>
-          <Grid item md={4}>
-            <Card className="p-5 my-4 bg-light-gray">
-              <h4>Monthly Check-ups</h4>
-              <p>
-                A check-up of every third weekend of a month to keep track of
-                patient's health and recovery.
-              </p>
-            </Card>
-            <Card className="p-5 my-4 bg-light-gray">
-              <h4>Compensation</h4>
-              <p>
-                Participants might recieve upto $30 for taking part in the
-                study.
-              </p>
-            </Card>
-          </Grid>
-          <Grid item md={2}></Grid>
-        </Grid>
-      </Paper>
+        </div>
+      </Parallax>
       <Grid container spacing={2}>
         <Grid item md={2}></Grid>
         <Grid item md={8}>
