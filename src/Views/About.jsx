@@ -2,6 +2,7 @@ import React from "react";
 import Button from "@material-ui/core/Button";
 import { Grid, Card } from "@material-ui/core";
 import { Parallax } from "react-parallax";
+import ScrollAnimation from "react-animate-on-scroll";
 
 function About() {
   return (
@@ -15,34 +16,44 @@ function About() {
           <Grid container spacing={2}>
             <Grid item md={2}></Grid>
             <Grid item md={4}>
-              <Card className="p-5 my-4 bg-light-gray">
-                <h4>Eligibilty</h4>
-                <p>
-                  18 years or older participants with symptoms of MDS or anemia.
-                </p>
-              </Card>
-              <Card className="p-5 my-4 bg-light-gray">
-                <h4>Treatment Period</h4>
-                <p>
-                  The total treatment period of this study is about 20-24 weeks.
-                </p>
-              </Card>
+              <ScrollAnimation animateIn="bounceInUp" duration={1}>
+                <Card className="p-5 my-4 bg-light-gray">
+                  <h4>Eligibilty</h4>
+                  <p>
+                    18 years or older participants with symptoms of MDS or
+                    anemia.
+                  </p>
+                </Card>
+              </ScrollAnimation>
+              <ScrollAnimation animateIn="bounceInUp" duration={1}>
+                <Card className="p-5 my-4 bg-light-gray">
+                  <h4>Treatment Period</h4>
+                  <p>
+                    The total treatment period of this study is about 20-24
+                    weeks.
+                  </p>
+                </Card>
+              </ScrollAnimation>
             </Grid>
             <Grid item md={4}>
-              <Card className="p-5 my-4 bg-light-gray">
-                <h4>Monthly Check-ups</h4>
-                <p>
-                  A check-up of every third weekend of a month to keep track of
-                  patient's health and recovery.
-                </p>
-              </Card>
-              <Card className="p-5 my-4 bg-light-gray">
-                <h4>Compensation</h4>
-                <p>
-                  Participants might recieve upto $30 for taking part in the
-                  study.
-                </p>
-              </Card>
+              <ScrollAnimation animateIn="bounceInUp" duration={1}>
+                <Card className="p-5 my-4 bg-light-gray">
+                  <h4>Monthly Check-ups</h4>
+                  <p>
+                    A check-up of every third weekend of a month to keep track
+                    of patient's health and recovery.
+                  </p>
+                </Card>
+              </ScrollAnimation>
+              <ScrollAnimation animateIn="bounceInUp" duration={1}>
+                <Card className="p-5 my-4 bg-light-gray">
+                  <h4>Compensation</h4>
+                  <p>
+                    Participants might recieve upto $30 for taking part in the
+                    study.
+                  </p>
+                </Card>
+              </ScrollAnimation>
             </Grid>
             <Grid item md={2}></Grid>
           </Grid>
@@ -86,9 +97,11 @@ function About() {
               are common for MDS and anemia. If you have common symptoms, you
               may be eligible to take part in the study.
             </p>
-            <Button variant="contained" color="secondary">
-              Start answering &#8594;
-            </Button>
+            <ScrollAnimation animateIn="bounceInUp" duration={1}>
+              <Button variant="contained" color="secondary">
+                Start answering &#8594;
+              </Button>
+            </ScrollAnimation>
           </Card>
         </Grid>
         <Grid item md={2}></Grid>

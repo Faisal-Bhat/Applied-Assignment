@@ -90,6 +90,7 @@ function Home() {
           </Grid>
         </div>
       </Parallax>
+
       <Grid container spacing={1} className="mb-20">
         <Grid item sm={12} xs={12} md={3}></Grid>
         <Grid item sm={12} xs={12} md={7}>
