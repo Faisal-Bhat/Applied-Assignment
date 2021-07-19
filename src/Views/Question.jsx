@@ -16,7 +16,6 @@ function Question() {
       }}
     >
       <h3 className="text-white text-center mb-10">Got a Question?</h3>
-
       <Grid container spacing={2}>
         <Grid item md={3}></Grid>
         <Grid container md={6} spacing={2} className="px-20">
@@ -42,7 +41,6 @@ function Question() {
               />
             </ScrollAnimation>
           </Grid>
-
           <Grid item md={12} className="text-center ">
             <ScrollAnimation animateIn="bounceInUp" duration={1}>
               <TextField
